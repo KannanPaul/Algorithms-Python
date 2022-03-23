@@ -15,7 +15,7 @@ Output: -1
 Explanation: 2 does not exist in nums so return -1
 '''
 
-#Solution-1 - Time complexity - O(log n)
+#Solution-1 - Time complexity - O(log n) & Space complexity: O(1)
 #Iterative Method
 def binarysearch(nums,target,low,high):
   while low<=high:
