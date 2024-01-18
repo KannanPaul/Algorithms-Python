@@ -25,7 +25,9 @@ Sample Output 1:
 
 # Solution 1:
 '''
-Time Complexity
+# Approach: The selection sort algorithm works by repeatedly selecting the smallest element from the unsorted part of the array and moving it to the beginning of the unsorted part. This process is done iteratively until the entire array is sorted.
+
+# Time Complexity
 
 O(N^2), where ‘N’ is the number of length of array.
 
