@@ -16,6 +16,7 @@ Explanation: After applying bubble sort on the input array, the output is [1 2 3
 # Solution 1:
 # Time Complexity - O( N ^ 2 ), where 'N' is the array ‘arr’ size. In the worst case, we have to do n^2 iterations on the array ‘arr’, Hence the time complexity is O( N ^ 2 ).      
 # Space Complexity - O( 1 ).
+# Approach : To sort our array using Bubble Sort, we will repeatedly check the adjacent elements in our array, and if they are in the wrong order (i.e., the previous element is greater than the next element), we will swap both of them, we will do this until our array is sorted.
 
 def bubbleSort(arr: List[int], n: int):
     n = len(arr)
