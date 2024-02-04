@@ -60,5 +60,4 @@ def insertionSortRecursion(arr, i, n):
         j = j - 1
     return insertionSortRecursion(arr, i+1,n)
 
-def insertionSort(arr):
-    return insertionSortRecursion(arr, 0, len(arr))
+insertionSortRecursion(arr, 0, len(arr))
