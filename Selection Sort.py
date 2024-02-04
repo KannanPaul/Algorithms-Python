@@ -53,3 +53,38 @@ def selectionSort(arr: List[int]) -> None:
         arr[min], arr[i] = arr[i], arr[min] 
         
     return arr
+
+# Solution 2: Recusrion Insertion Sort
+# Time Complexity: O(n2)
+# Auxiliary Space: O(n)
+# Reference - https://www.geeksforgeeks.org/recursive-selection-sort/?ref=lbp
+
+def minIndex( a , i , j ):
+	if i == j:
+		return i
+		
+	k = minIndex(a, i + 1, j)
+	
+	return (i if a[i] < a[k] else k)
+
+def recurSelectionSort(a, n, index = 0):
+
+	if index == n:
+		return -1
+		
+	
+	k = minIndex(a, index, n-1)
+	
+	
+	if k != index:
+		a[k], a[index] = a[index], a[k]
+		
+	recurSelectionSort(a, n, index + 1)
+	
+
+arr = [3, 1, 5, 2, 7, 0]
+n = len(arr)
+
+recurSelectionSort(arr, n)
+
+
