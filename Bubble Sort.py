@@ -27,3 +27,21 @@ def bubbleSort(arr: List[int], n: int):
             
     return arr
 
+
+# Solution 2:
+# Time Complexity: O(n*n)
+# Auxiliary Space: O(n)
+
+def recursiveBubbleSort(arr, n):
+    if n == 1:
+        return
+    swap = 0
+    for i in range(n-1):
+       if arr[i] > arr[i+1]:
+            arr[i], arr[i+1] = arr[i+1], arr[i] 
+            swap = 1
+    if swap == 0:
+        return
+    recursiveBubbleSort(arr, n-1)
+
+recursiveBubbleSort(arr, n)
