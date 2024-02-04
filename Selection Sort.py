@@ -66,7 +66,7 @@ def minIndex( a , i , j ):
 	
    return (i if a[i] < a[k] else k)
 
-def recurSelectionSort(a, n, index = 0):
+def recursiveSelectionSort(a, n, index = 0):
    if index == n:
       return -1
 	   
@@ -75,12 +75,12 @@ def recurSelectionSort(a, n, index = 0):
    if k != index:
       a[k], a[index] = a[index], a[k]
 	
-   recurSelectionSort(a, n, index + 1)
+   recursiveSelectionSort(a, n, index + 1)
 	
 
 arr = [3, 1, 5, 2, 7, 0]
 n = len(arr)
 
-recurSelectionSort(arr, n)
+recursiveSelectionSort(arr, n)
 
 
