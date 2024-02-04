@@ -60,25 +60,22 @@ def selectionSort(arr: List[int]) -> None:
 # Reference - https://www.geeksforgeeks.org/recursive-selection-sort/?ref=lbp
 
 def minIndex( a , i , j ):
-	if i == j:
-	   return i
-	k = minIndex(a, i + 1, j)
+   if i == j:
+      return i
+   k = minIndex(a, i + 1, j)
 	
-	return (i if a[i] < a[k] else k)
+   return (i if a[i] < a[k] else k)
 
 def recurSelectionSort(a, n, index = 0):
-
-	if index == n:
-	   return -1
-		
+   if index == n:
+      return -1
+	   
+   k = minIndex(a, index, n-1)
 	
-	k = minIndex(a, index, n-1)
+   if k != index:
+      a[k], a[index] = a[index], a[k]
 	
-	
-	if k != index:
-	   a[k], a[index] = a[index], a[k]
-	
-	recurSelectionSort(a, n, index + 1)
+   recurSelectionSort(a, n, index + 1)
 	
 
 arr = [3, 1, 5, 2, 7, 0]
