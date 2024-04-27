@@ -122,3 +122,29 @@ def quick_sort(arr):
 arr = [29, 10, 14, 37, 13]
 quick_sort(arr)
 print("Sorted array:", arr)
+
+
+#### Solution 3:  picking the first element as the Pivot:
+def partition(arr,low, high):
+    pivot = arr[low]
+    i = low+1
+    j = high
+    
+    while True:
+        while i<= j and arr[i] <= pivot:
+            i += 1
+            
+        while i<= j and arr[j] >= pivot:
+            j -=1
+        
+        if i >= j:
+            arr[low], arr[j] = arr[j], arr[low]
+            return j
+        
+        arr[i], arr[j] = arr[j], arr[i]
+
+def quick_sort(arr, start, end):
+    if start < end:
+        pi = partition(arr,start, end)
+        quick_sort(arr, start, pi-1)
+        quick_sort(arr, pi+1, end)
