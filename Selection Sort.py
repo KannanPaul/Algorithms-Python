@@ -54,7 +54,7 @@ def selectionSort(arr: List[int]) -> None:
         
     return arr
 
-# Solution 2: Recusrion Insertion Sort
+# Solution 2: Recusrion Selection Sort
 # Time Complexity: O(n2)
 # Auxiliary Space: O(n)
 # Reference - https://www.geeksforgeeks.org/recursive-selection-sort/?ref=lbp
