@@ -20,7 +20,8 @@ Reference
 - https://www.programiz.com/dsa/heap-sort
 - https://www.geeksforgeeks.org/heap-sort/?ref=shm
 ```
-
+Solution 1:
+  
 Time Complexity: O(N log N)
 Auxiliary Space: O(log n), due to the recursive call stack. However, auxiliary space can be O(1) for iterative implementation.
 
@@ -40,8 +41,6 @@ def heapify(arr, n, i):
       if largest != i:
           arr[i], arr[largest] = arr[largest], arr[i]
           heapify(arr, n, largest)
-  
-  Solution 1:
   
   def heapSort(arr):
       n = len(arr)
